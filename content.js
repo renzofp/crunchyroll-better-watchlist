@@ -5,21 +5,10 @@
     const watchlistContainer = document.querySelector('.erc-watchlist .watchlist-body');
     if (watchlistContainer) {
       console.log('Watchlist container detected.');
-      waitForItemsToLoad(watchlistContainer);
+      processWatchlist(watchlistContainer);
     } else {
       console.log('Waiting for watchlist container...');
       setTimeout(pollForContainer, 500); // Retry every 500ms
-    }
-  };
-
-  const waitForItemsToLoad = (watchlistContainer) => {
-    const placeholders = document.querySelectorAll('.loading--9nt-6');
-    if (placeholders.length > 0) {
-      console.log(`Loading items... (${placeholders.length} placeholders remaining)`);
-      setTimeout(() => waitForItemsToLoad(watchlistContainer), 500);
-    } else {
-      console.log('All items loaded.');
-      processWatchlist(watchlistContainer);
     }
   };
 
@@ -116,5 +105,6 @@
     console.log('Watchlist updated and grouped successfully!');
   };
 
-  pollForContainer();
+  // Delay before the script starts
+  setTimeout(pollForContainer, 2500);
 })();
