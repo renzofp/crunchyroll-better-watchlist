@@ -3,10 +3,10 @@
   "name": "Crunchyroll Watchlist Enhancer",
   "version": "1.0",
   "description": "Enhances the Crunchyroll watchlist page by organizing and styling sections.",
-  "host_permissions": ["https://www.crunchyroll.com/watchlist*"],
+  "host_permissions": ["https://www.crunchyroll.com/watchlist"],
   "content_scripts": [
     {
-      "matches": ["https://www.crunchyroll.com/watchlist*"],
+      "matches": ["https://www.crunchyroll.com/watchlist"],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
