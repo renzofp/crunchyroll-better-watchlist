@@ -16,7 +16,7 @@ A lightweight Chrome extension to reorganize Crunchyroll's watchlist into clear,
 
 1. **Clone or download the repository**:
    ```bash
-   git clone https://github.com/yourusername/crunchyroll-better-watchlist.git
+   git clone https://github.com/renzofp/crunchyroll-better-watchlist.git
    ```
 2. **Load as an unpacked extension**:
    - Go to `chrome://extensions/` in your browser.
